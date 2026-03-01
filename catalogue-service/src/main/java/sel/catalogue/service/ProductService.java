@@ -1,10 +1,8 @@
-package sel.manager.service;
+package sel.catalogue.service;
 
-import jakarta.annotation.Nullable;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import sel.manager.Entity.Product;
-import sel.manager.repository.ProductRepository;
+import sel.catalogue.Entity.Product;
 
 import java.util.Optional;
 //import sel.manager.repository.ProductRepository;

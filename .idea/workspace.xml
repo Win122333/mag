@@ -4,21 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2bc9be35-dabd-44f5-9477-9248aeed388d" name="Changes" comment="setting project">
-      <change afterPath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/controller/ProductsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/dto/NewProductDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/dto/UpdateProductDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager-app/src/main/resources/templates/edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager-app/src/main/resources/templates/fragments/fragments.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager-app/src/main/resources/templates/product.html" afterDir="false" />
+    <list default="true" id="2bc9be35-dabd-44f5-9477-9248aeed388d" name="Changes" comment="add crud to product">
+      <change afterPath="$PROJECT_DIR$/catalogue-service/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalogue-service/src/main/java/sel/catalogue/CatalogueServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalogue-service/src/main/java/sel/catalogue/Entity/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalogue-service/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalogue-service/src/main/resources/db/changelog/V1/V1_1__Basic_schema.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalogue-service/src/main/resources/db/changelog/V1/accumulator-changelog.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalogue-service/src/main/resources/db/changelog/master-changelog.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/entity/Product.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/Entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/Entity/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalogue-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/catalogue-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/Entity/Product.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/repository/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager-app/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/manager-app/src/main/resources/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager-app/src/main/resources/templates/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/manager-app/src/main/resources/templates/create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager-app/src/main/resources/templates/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/manager-app/src/main/resources/templates/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/dto/NewProductDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/catalogue-service/src/main/java/sel/catalogue/dto/NewProductDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/dto/UpdateProductDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/catalogue-service/src/main/java/sel/catalogue/dto/UpdateProductDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/catalogue-service/src/main/java/sel/catalogue/repository/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/catalogue-service/src/main/java/sel/catalogue/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager-app/src/main/resources/templates/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/manager-app/src/main/resources/templates/product.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +35,7 @@
         <option value="Interface" />
         <option value="HTML File" />
         <option value="Class" />
+        <option value="Record" />
       </list>
     </option>
   </component>
@@ -91,11 +96,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/catalogue-service/src/main/resources/db/changelog" />
+      <recent name="$PROJECT_DIR$/catalogue-service/src/main/resources" />
+      <recent name="$PROJECT_DIR$/catalogue-service/src/main/resources/db/changelog/V1" />
       <recent name="E:\mag\manager-app\src\main\resources\templates\catalogue" />
       <recent name="E:\mag\manager-app\src\main\resources\templates\products" />
-      <recent name="E:\mag\manager-app\src\main\resources\templates\catalogue\products" />
-      <recent name="E:\mag\manager-app\src\main\resources\templates" />
-      <recent name="E:\mag\manager-app\src\main\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -106,9 +111,10 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ManagerApplication">
-    <configuration name="CatalogueApplication" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="org.win122333.CatalogueApplication" />
+  <component name="RunManager" selected="Application.Catalogue-app">
+    <configuration name="Catalogue-app" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="sel.catalogue.CatalogueServiceApplication" />
+      <module name="catalogue-service" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -150,7 +156,7 @@
     </configuration>
     <list>
       <item itemvalue="Application.ManagerApplication" />
-      <item itemvalue="Application.CatalogueApplication" />
+      <item itemvalue="Application.Catalogue-app" />
     </list>
   </component>
   <component name="SharedIndexes">
@@ -171,10 +177,22 @@
       <updated>1772361720722</updated>
       <workItem from="1772365123796" duration="4756000" />
     </task>
+    <task id="LOCAL-00001" summary="add crud to product">
+      <option name="closed" value="true" />
+      <created>1772384270301</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1772384270301</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="docker-compose.yml" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -189,6 +207,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="setting project" />
-    <option name="LAST_COMMIT_MESSAGE" value="setting project" />
+    <MESSAGE value="add crud to product" />
+    <option name="LAST_COMMIT_MESSAGE" value="add crud to product" />
   </component>
 </project>

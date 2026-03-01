@@ -10,7 +10,7 @@ import sel.manager.service.ProductService;
 @Slf4j
 @Controller
 @RequiredArgsConstructor
-@RequestMapping("catalogue/products/{productId:\\d+}")
+@RequestMapping("/catalogue/products/{productId:\\d+}")
 public class ProductController {
 
     private final ProductService productService;
@@ -33,11 +33,19 @@ public class ProductController {
         log.info("вызван get /{productId:\\d+}/edit");
         return "edit";
     }
-    @PostMapping("update")
+    @PostMapping("/update")
     public String updateProduct(
             @ModelAttribute UpdateProductDto dto
             ) {
         log.info("вызван update c данными: {}", dto);
         return "redirect:/";
     }
+    @PostMapping("/delete")
+    public String deleteProduct(
+            @PathVariable("productId") Integer id
+    ) {
+        log.info("удалили product с id = {}", id);
+        return "redirect:/";
+    }
+    //TODO добавить обработку ошибок из первого урока
 }

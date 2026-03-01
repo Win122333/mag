@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +8,10 @@
 <body>
 <h1 th:text="${product.title}"> </h1>
 <p th:text="${product.description}"></p>
-<a th:href="@{/catalogue/products/{id}/edit(id=${product.id})}">edit</a>
+<a th:href="@{/catalogue/products/{id}/edit(id=${product.id})}">edit</a><br>
+<hr>
+<form method="post" th:action="@{/catalogue/products/{id}/delete(id=${product.id})}">
+    <button type="submit">delete</button>
+</form>
 </body>
 </html>

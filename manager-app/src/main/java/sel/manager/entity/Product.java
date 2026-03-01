@@ -1,6 +1,6 @@
-package sel.manager.dto;
+package sel.manager.entity;
 
-public record NewProductDto (
+public record Product(
         Integer id,
         String title,
         String description

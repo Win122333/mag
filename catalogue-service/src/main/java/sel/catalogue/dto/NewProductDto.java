@@ -1,6 +1,6 @@
-package sel.manager.dto;
+package sel.catalogue.dto;
 
-public record UpdateProductDto (
+public record NewProductDto (
         Integer id,
         String title,
         String description
