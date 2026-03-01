@@ -4,20 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2bc9be35-dabd-44f5-9477-9248aeed388d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/catalogue-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/Entity/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/controller/ProductController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/repository/ProductRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/service/ProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager-app/src/main/resources/templates/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager-app/src/main/resources/templates/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+    <list default="true" id="2bc9be35-dabd-44f5-9477-9248aeed388d" name="Changes" comment="setting project">
+      <change afterPath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/controller/ProductsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/dto/NewProductDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/dto/UpdateProductDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager-app/src/main/resources/templates/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager-app/src/main/resources/templates/fragments/fragments.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager-app/src/main/resources/templates/product.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/Entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/Entity/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/repository/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/service/ProductService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/manager-app/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/manager-app/src/main/resources/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager-app/src/main/resources/templates/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/manager-app/src/main/resources/templates/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager-app/src/main/resources/templates/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/manager-app/src/main/resources/templates/list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,8 +28,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -41,16 +43,17 @@
     &quot;assignee&quot;: &quot;Win122333&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Win122333/mag.git",
-    "accountId": "b2c6fc11-50f5-4c03-81ff-5cccb5bcddcf"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Win122333/mag.git&quot;,
+    &quot;accountId&quot;: &quot;b2c6fc11-50f5-4c03-81ff-5cccb5bcddcf&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
   <component name="ProjectId" id="3ALAwkdevGYDKAB4vNWWUkhnxwY" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -61,15 +64,17 @@
     "Application.CatalogueApplication.executor": "Run",
     "Application.Main.executor": "Run",
     "Application.ManagerApplication.executor": "Run",
+    "DefaultHtmlFileTemplate": "HTML File",
     "HTTP Request.All in generated-requests.executor": "Run",
     "Maven.mag [org.apache.maven.plugins:maven-site-plugin:3.12.1:run].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/mag",
+    "last_opened_file_path": "/Users/win122333/IdeaProjects/mag",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -100,25 +105,6 @@
         <option value="MavenRunConfiguration" />
       </set>
     </option>
-    <option name="configurationStatuses">
-      <map>
-        <entry key="Application">
-          <value>
-            <map>
-              <entry key="CatalogueApplication" value="FAILED" />
-              <entry key="ManagerApplication" value="STOPPED" />
-            </map>
-          </value>
-        </entry>
-        <entry key="HttpClient.HttpRequestRunConfigurationType">
-          <value>
-            <map>
-              <entry key="All in generated-requests" value="STOPPED" />
-            </map>
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
   <component name="RunManager" selected="Application.ManagerApplication">
     <configuration name="CatalogueApplication" type="Application" factoryName="Application">
@@ -129,13 +115,24 @@
     </configuration>
     <configuration name="ManagerApplication" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="sel.manager.ManagerApplication" />
-      <module name="manager-app (2)" />
+      <module name="manager-app" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="All in generated-requests" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http">
       <method v="2" />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="CatalogueApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="manager-app (1)" />
@@ -154,15 +151,7 @@
     <list>
       <item itemvalue="Application.ManagerApplication" />
       <item itemvalue="Application.CatalogueApplication" />
-      <item itemvalue="HTTP Request.All in generated-requests" />
-      <item itemvalue="Spring Boot.CatalogueApplication" />
-      <item itemvalue="Spring Boot.ManagerApplication" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="HTTP Request.All in generated-requests" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -197,5 +186,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="setting project" />
+    <option name="LAST_COMMIT_MESSAGE" value="setting project" />
   </component>
 </project>

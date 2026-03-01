@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Создание товара</title>
 </head>
 <body>
-<form method="post" th:action="@{catalogue/product/create/save}">
+<a href="/">Назад</a>
+<form method="post" th:action="@{/catalogue/products/create}">
     <label>
         Введите название<br>
         <input type="text" name="title">
@@ -15,7 +16,7 @@
         Введите описание<br>
         <textarea name="description"></textarea>
     </label><br>
-    <button type="submit"></button>
+    <button type="submit">Создать!</button>
 </form>
 </body>
 </html>

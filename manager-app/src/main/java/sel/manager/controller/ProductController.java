@@ -1,39 +1,43 @@
 package sel.manager.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.ResponseEntity;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import sel.manager.Entity.Product;
+import sel.manager.dto.UpdateProductDto;
 import sel.manager.service.ProductService;
-
-import java.util.ArrayList;
-import java.util.List;
-
+@Slf4j
 @Controller
 @RequiredArgsConstructor
-@RequestMapping("catalogue/products")
+@RequestMapping("catalogue/products/{productId:\\d+}")
 public class ProductController {
 
     private final ProductService productService;
 
-    @GetMapping("/list")
-    public String getIndex(Model model) {
-        model.addAttribute("products", new ArrayList());
-        return "list";
+    @ModelAttribute("product")
+    public Product init(@PathVariable("productId") Integer id) {
+        return Product.builder()
+                .id(id)
+                .title("Молоко")
+                .description("Описание")
+                .build();
     }
-    @GetMapping("/create")
-    public String createView() {
-        return "create";
+    @GetMapping
+    public String getProduct() {
+        log.info("вызван get /{productId:\\d+}");
+        return "product";
     }
-    @PostMapping("/create/save")
-    public ResponseEntity<String> save(@RequestBody Product product) {
-        System.out.println(product);
-
-        return ResponseEntity.ok("saved");
+    @GetMapping("/edit")
+    public String editProduct() {
+        log.info("вызван get /{productId:\\d+}/edit");
+        return "edit";
+    }
+    @PostMapping("update")
+    public String updateProduct(
+            @ModelAttribute UpdateProductDto dto
+            ) {
+        log.info("вызван update c данными: {}", dto);
+        return "redirect:/";
     }
 }
