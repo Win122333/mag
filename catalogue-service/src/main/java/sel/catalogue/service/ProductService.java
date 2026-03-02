@@ -6,6 +6,7 @@ import sel.catalogue.Entity.Product;
 import sel.catalogue.repository.ProductRepository;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Optional;
 
 @Service
@@ -25,7 +26,16 @@ public class ProductService {
     public Product save(Product product) {
         return productRepository.save(product);
     }
+
     public void delete(Integer id) {
-        productRepository.delete(productRepository.findById(id).orElseThrow());
+        productRepository.delete(
+                productRepository.findById(id).orElseThrow(NoSuchElementException::new));
+    }
+
+    public Product update(Integer id, Product product) {
+        Product p = productRepository.findById(id).orElseThrow(NoSuchElementException::new);
+        p.setDescription(product.getDescription());
+        p.setTitle(product.getTitle());
+        return productRepository.save(p);
     }
 }
