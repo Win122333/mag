@@ -4,8 +4,9 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import sel.catalogue.Entity.Product;
-import sel.catalogue.dto.NewProductDto;
+import sel.catalogue.dto.RequestProductDto;
 import sel.catalogue.dto.ResponseProductDto;
+import sel.catalogue.dto.mapper.Mapper;
 import sel.catalogue.service.ProductService;
 
 import java.util.List;
@@ -15,28 +16,26 @@ import java.util.List;
 @RequestMapping("/catalogue/products")
 public class ProductRestController {
     private final ProductService productService;
+    private final Mapper mapper;
 
     @GetMapping
     public ResponseEntity<List<Product>> getAll() {
         return ResponseEntity.ok(productService.getAll());
     }
     @GetMapping("/{id}")
-    public ResponseEntity<Product> getById(
+    public ResponseEntity<ResponseProductDto> getById(
             @PathVariable("id") Integer id
     ) {
-        return ResponseEntity.ok(productService.getById(id).orElse(Product.builder()
+        return ResponseEntity.ok(mapper.mapFromProduct(productService.getById(id).orElse(Product.builder()
                         .title("Товара нет")
                         .description("Тут нет товара")
-                .build()));
+                .build())));
     }
     @PostMapping
     public ResponseEntity<Product> save(
-            @RequestBody NewProductDto dto
+            @RequestBody RequestProductDto dto
             ) {
-        return ResponseEntity.ok(productService.save(Product.builder()
-                        .title(dto.title())
-                        .description(dto.description())
-                .build()));
+        return ResponseEntity.ok(mapper.mapToProduct(dto));
     }
     @DeleteMapping("/{id}")
     public void delete(
