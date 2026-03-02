@@ -15,10 +15,10 @@ import lombok.NoArgsConstructor;
 public class Product {
     @Id
     @Column(name = "id")
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     @Column(name = "c_title", nullable = false)
     private String title;
-    @Column(name = "c_description")
+    @Column(name = "c_details")
     private String description;
 }
