@@ -1,12 +1,12 @@
 package sel.manager.client;
 
 import lombok.RequiredArgsConstructor;
+import org.api.http.dto.RequestProductDto;
+import org.api.http.dto.ResponseProductDto;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestClient;
-import sel.manager.dto.RequestProductDto;
-import sel.manager.dto.ResponseProductDto;
 
 import java.util.List;
 import java.util.Optional;

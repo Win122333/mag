@@ -1,8 +1,6 @@
 package sel.manager.client;
 
-import sel.manager.dto.RequestProductDto;
-import sel.manager.dto.ResponseProductDto;
-import sel.manager.entity.Product;
+import org.api.http.dto.ResponseProductDto;
 
 import java.util.List;
 import java.util.Optional;

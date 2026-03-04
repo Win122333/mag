@@ -2,10 +2,11 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Edit</title>
+    <title>Изменение товара</title>
 </head>
 <body>
-
+<a href="/catalogue/products/list">Назад</a>
+<hr>
 <form method="post" th:action="@{/catalogue/products/{id}/update(id=${product.id})}">
     <label>
         Название<br>

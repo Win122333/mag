@@ -2,12 +2,12 @@ package sel.manager.controller;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.api.http.dto.RequestProductDto;
+import org.api.http.dto.ResponseProductDto;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import sel.manager.client.ProductsRestClient;
-import sel.manager.dto.RequestProductDto;
-import sel.manager.dto.ResponseProductDto;
 
 import java.util.NoSuchElementException;
 

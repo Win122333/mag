@@ -4,26 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2bc9be35-dabd-44f5-9477-9248aeed388d" name="Changes" comment="db, entity, repo">
-      <change afterPath="$PROJECT_DIR$/common/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/client/ProductRestClientImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/client/ProductsRestClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/config/Config.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager-app/src/main/resources/templates/error/404.html" afterDir="false" />
+    <list default="true" id="2bc9be35-dabd-44f5-9477-9248aeed388d" name="Changes" comment="add common module and refactor code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalogue-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/catalogue-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalogue-service/src/main/java/sel/catalogue/controller/ProductRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/catalogue-service/src/main/java/sel/catalogue/controller/ProductRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalogue-service/src/main/java/sel/catalogue/dto/NewProductDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/org/api/http/dto/ResponseProductDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalogue-service/src/main/java/sel/catalogue/dto/RequestProductDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/org/api/http/dto/RequestProductDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalogue-service/src/main/java/sel/catalogue/dto/ResponseProductDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalogue-service/src/main/java/sel/catalogue/dto/UpdateProductDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalogue-service/src/main/java/sel/catalogue/dto/mapper/Mapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/catalogue-service/src/main/java/sel/catalogue/dto/mapper/Mapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager-app/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/manager-app/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/ManagerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/ManagerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/client/ProductRestClientImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/client/ProductRestClientImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/client/ProductsRestClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/client/ProductsRestClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/controller/ProductController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/controller/ProductsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/controller/ProductsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/entity/Product.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager-app/src/main/resources/templates/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/manager-app/src/main/resources/templates/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager-app/src/main/resources/templates/fragments/fragments.html" beforeDir="false" afterPath="$PROJECT_DIR$/manager-app/src/main/resources/templates/fragments/fragments.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager-app/src/main/resources/templates/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/manager-app/src/main/resources/templates/product.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +111,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Catalogue-app">
+  <component name="RunManager" selected="Application.ManagerApplication">
     <configuration name="Catalogue-app" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="sel.catalogue.CatalogueServiceApplication" />
       <module name="catalogue-service" />
@@ -203,7 +193,15 @@
       <option name="project" value="LOCAL" />
       <updated>1772392380222</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add common module and refactor code">
+      <option name="closed" value="true" />
+      <created>1772631700574</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1772631700574</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -227,7 +225,8 @@
     <MESSAGE value="setting project" />
     <MESSAGE value="add crud to product" />
     <MESSAGE value="db, entity, repo" />
-    <option name="LAST_COMMIT_MESSAGE" value="db, entity, repo" />
+    <MESSAGE value="add common module and refactor code" />
+    <option name="LAST_COMMIT_MESSAGE" value="add common module and refactor code" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
