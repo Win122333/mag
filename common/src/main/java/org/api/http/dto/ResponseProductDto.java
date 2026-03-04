@@ -1,6 +1,6 @@
-package sel.manager.entity;
+package org.api.http.dto;
 
-public record Product(
+public record ResponseProductDto(
         Integer id,
         String title,
         String description

@@ -5,11 +5,12 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import sel.manager.Entity.Product;
-import sel.manager.dto.NewProductDto;
-import sel.manager.service.ProductService;
+import sel.manager.client.ProductsRestClient;
+import sel.manager.dto.RequestProductDto;
+import sel.manager.entity.Product;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @Slf4j
 @Controller
@@ -17,24 +18,29 @@ import java.util.ArrayList;
 @RequestMapping("catalogue/products")
 public class ProductsController {
 
-    private final ProductService productService;
+    private final ProductsRestClient restClient;
 
     @GetMapping("/list")
-    public String getIndex(Model model) {
+    public String getAll(Model model) {
         log.info("вызван get /list");
-        model.addAttribute("products", new ArrayList());
+
+        List<Product> allProducts = restClient.findAllProducts();
+        model.addAttribute("products", allProducts);
         return "list";
     }
+
     @GetMapping("/create")
     public String createView() {
         log.info("вызван get /create");
         return "create";
     }
+
     @PostMapping("/create")
     public String save(
-            @ModelAttribute NewProductDto dto
+            @ModelAttribute RequestProductDto dto
             ) {
         log.info("вызван post /create для {}", dto);
+        restClient.create(dto.title(), dto.description());
         return "redirect:/";
     }
 }

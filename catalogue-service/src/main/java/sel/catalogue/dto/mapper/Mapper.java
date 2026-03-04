@@ -1,8 +1,8 @@
 package sel.catalogue.dto.mapper;
 
+import org.api.http.dto.RequestProductDto;
+import org.api.http.dto.ResponseProductDto;
 import sel.catalogue.Entity.Product;
-import sel.catalogue.dto.RequestProductDto;
-import sel.catalogue.dto.ResponseProductDto;
 
 @org.mapstruct.Mapper(componentModel = "spring")
 public interface Mapper {

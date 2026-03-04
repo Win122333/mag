@@ -3,29 +3,34 @@ package sel.manager.controller;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import sel.manager.Entity.Product;
-import sel.manager.dto.UpdateProductDto;
-import sel.manager.service.ProductService;
+import sel.manager.client.ProductsRestClient;
+import sel.manager.dto.RequestProductDto;
+import sel.manager.dto.ResponseProductDto;
+
+import java.util.NoSuchElementException;
+
 @Slf4j
 @Controller
 @RequiredArgsConstructor
 @RequestMapping("/catalogue/products/{productId:\\d+}")
 public class ProductController {
 
-    private final ProductService productService;
+    private final ProductsRestClient productsRestClient;
 
     @ModelAttribute("product")
-    public Product init(@PathVariable("productId") Integer id) {
-        return Product.builder()
-                .id(id)
-                .title("Молоко")
-                .description("Описание")
-                .build();
+    public ResponseProductDto init(
+            @PathVariable("productId") Integer id
+    ) throws NoSuchElementException {
+        log.info("get by product id {}", id);
+        return productsRestClient.findById(id).orElseThrow(NoSuchElementException::new);
     }
     @GetMapping
-    public String getProduct() {
-        log.info("вызван get /{productId:\\d+}");
+    public String getProduct(
+            @PathVariable("productId") Integer id
+    ) {
+        log.info("вызван get /id {}", id);
         return "product";
     }
     @GetMapping("/edit")
@@ -35,9 +40,11 @@ public class ProductController {
     }
     @PostMapping("/update")
     public String updateProduct(
-            @ModelAttribute UpdateProductDto dto
+            @PathVariable("productId") Integer id,
+            @ModelAttribute RequestProductDto dto
             ) {
         log.info("вызван update c данными: {}", dto);
+        productsRestClient.update(id, dto.title(), dto.description());
         return "redirect:/";
     }
     @PostMapping("/delete")
@@ -45,7 +52,16 @@ public class ProductController {
             @PathVariable("productId") Integer id
     ) {
         log.info("удалили product с id = {}", id);
+        productsRestClient.delete(id);
         return "redirect:/";
+    }
+
+    @ExceptionHandler(NoSuchElementException.class)
+    public String NoSuchElementExceptionHandle(
+            NoSuchElementException e,
+            Model model) {
+        model.addAttribute("e", e.getMessage());
+        return "error/404";
     }
     //TODO добавить обработку ошибок из первого урока
 }
