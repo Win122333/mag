@@ -1,0 +1,40 @@
+services:
+  catalogue_db:
+    image: postgres:16
+    restart: unless-stopped
+    ports:
+      - "5434:5432"
+    volumes:
+      - catalogue_postgres_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: qewr
+      POSTGRES_DB: catalogue
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 10s
+      timeout: 5s
+      start_period: 10s
+      retries: 5
+
+  manager_db:
+    image: postgres:16
+    restart: unless-stopped
+    ports:
+      - "5435:5432"
+    volumes:
+      - manager_postgres_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: qewr
+      POSTGRES_DB: manager
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 10s
+      timeout: 5s
+      start_period: 10s
+      retries: 5
+
+volumes:
+  catalogue_postgres_data:
+  manager_postgres_data:

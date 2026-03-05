@@ -4,16 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2bc9be35-dabd-44f5-9477-9248aeed388d" name="Changes" comment="add common module and refactor code">
+    <list default="true" id="2bc9be35-dabd-44f5-9477-9248aeed388d" name="Changes" comment="refactor">
+      <change afterPath="$PROJECT_DIR$/catalogue-service/src/main/java/sel/catalogue/config/Security.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/config/SecurityBeans.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/entity/Authority.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/entity/SelmagUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/repository/SelmagUserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/security/OAuthClientRequestInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/security/SelmagUserDetailsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager-app/src/main/resources/application-standalone.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager-app/src/main/resources/db/changelog/V1/V1_1__Basic_schema_changelog.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager-app/src/main/resources/db/changelog/V1/accumulator-changelog.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager-app/src/main/resources/db/changelog/master-changelog.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/client/ProductRestClientImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/client/ProductRestClientImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/client/ProductsRestClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/client/ProductsRestClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/controller/ProductsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/controller/ProductsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager-app/src/main/resources/templates/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/manager-app/src/main/resources/templates/edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager-app/src/main/resources/templates/fragments/fragments.html" beforeDir="false" afterPath="$PROJECT_DIR$/manager-app/src/main/resources/templates/fragments/fragments.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager-app/src/main/resources/templates/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/manager-app/src/main/resources/templates/product.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalogue-service/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalogue-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/catalogue-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalogue-service/src/main/java/sel/catalogue/controller/ProductRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/catalogue-service/src/main/java/sel/catalogue/controller/ProductRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalogue-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/catalogue-service/src/main/resources/application-standalone.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager-app/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/manager-app/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/config/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/config/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager-app/src/main/resources/application.properties" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,10 +33,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="HTML File" />
-        <option value="Class" />
         <option value="Record" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -59,40 +69,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Application.CatalogueApplication.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.ManagerApplication.executor": "Run",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "HTTP Request.All in generated-requests.executor": "Run",
-    "Maven.mag [org.apache.maven.plugins:maven-site-plugin:3.12.1:run].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "jdk.selected.JAVA_MODULE": "openjdk-23",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/win122333/IdeaProjects/mag/common/src/main/java/org/api/http/dto",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "/Users/win122333/IdeaProjects/mag/common/src/main/java/org/neoflex/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors",
-    "settings.editor.splitter.proportion": "0.26605505",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Application.CatalogueApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ManagerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;HTTP Request.All in generated-requests.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.mag [org.apache.maven.plugins:maven-site-plugin:3.12.1:run].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-23&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/win122333/IdeaProjects/mag&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/win122333/IdeaProjects/mag/common/src/main/java/org/neoflex/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;,
+    &quot;settings.editor.splitter.proportion&quot;: &quot;0.26605505&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/common/src/main/java/org/api/http/dto" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -111,15 +122,21 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ManagerApplication">
+  <component name="RunManager" selected="Application.Catalogue-app">
     <configuration name="Catalogue-app" type="Application" factoryName="Application">
+      <envs>
+        <env name="SPRING_PROFILES_ACTIVE" value="standalone" />
+      </envs>
       <option name="MAIN_CLASS_NAME" value="sel.catalogue.CatalogueServiceApplication" />
       <module name="catalogue-service" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ManagerApplication" type="Application" factoryName="Application">
+    <configuration name="Manager-app" type="Application" factoryName="Application">
+      <envs>
+        <env name="SPRING_PROFILES_ACTIVE" value="standalone" />
+      </envs>
       <option name="MAIN_CLASS_NAME" value="sel.manager.ManagerApplication" />
       <module name="manager-app" />
       <method v="2">
@@ -156,7 +173,7 @@
     </configuration>
     <list>
       <item itemvalue="Application.Catalogue-app" />
-      <item itemvalue="Application.ManagerApplication" />
+      <item itemvalue="Application.Manager-app" />
     </list>
   </component>
   <component name="SharedIndexes">
@@ -201,7 +218,15 @@
       <option name="project" value="LOCAL" />
       <updated>1772631700574</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="refactor">
+      <option name="closed" value="true" />
+      <created>1772633436453</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1772633436453</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,7 +251,8 @@
     <MESSAGE value="add crud to product" />
     <MESSAGE value="db, entity, repo" />
     <MESSAGE value="add common module and refactor code" />
-    <option name="LAST_COMMIT_MESSAGE" value="add common module and refactor code" />
+    <MESSAGE value="refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

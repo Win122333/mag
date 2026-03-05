@@ -16,6 +16,7 @@ import sel.catalogue.Entity.Product;
 import sel.catalogue.dto.mapper.Mapper;
 import sel.catalogue.service.ProductService;
 
+import java.security.Principal;
 import java.util.List;
 import java.util.Map;
 import java.util.NoSuchElementException;
@@ -29,13 +30,15 @@ public class ProductRestController {
     private final Mapper mapper;
 
     @GetMapping
-    public ResponseEntity<List<Product>> getAll() {
+    public ResponseEntity<List<Product>> getAll(Principal principal) {
+        log.info("principal {}", principal);
         return ResponseEntity.ok(productService.getAll());
     }
     @GetMapping("/{id}")
     public ResponseEntity<ResponseProductDto> getById(
             @PathVariable("id") Integer id
     ) {
+
         return ResponseEntity.ok(mapper.mapFromProduct(productService.getById(id).orElse(Product.builder()
                         .title("Товара нет")
                         .description("Тут нет товара")

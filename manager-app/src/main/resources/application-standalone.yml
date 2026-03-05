@@ -1,0 +1,32 @@
+server:
+  port: 9999
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5435/manager
+    username: postgres
+    password: qewr
+  liquibase:
+    change-log: db/changelog/master-changelog.xml
+  security:
+    oauth2:
+      client:
+        provider:
+          keycloak:
+            issuer-uri: http://localhost:9997/realms/mag
+            user-name-attribute: preferred_username
+        registration:
+          keycloak:
+            client-id: manager-app
+            client-secret: bZZwhYMMiZfHTcsp7eXl3ubJrYDTnopW
+            scope:
+              - openid
+              - view_catalogue
+              - edit_catalogue
+              - microprofile-jwt
+
+client:
+  url: http://localhost:9998
+catalogue:
+  registration-id: keycloak
+  user: catalogue_service_user
+  password: password
