@@ -4,26 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2bc9be35-dabd-44f5-9477-9248aeed388d" name="Changes" comment="refactor">
-      <change afterPath="$PROJECT_DIR$/catalogue-service/src/main/java/sel/catalogue/config/Security.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/config/SecurityBeans.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/entity/Authority.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/entity/SelmagUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/repository/SelmagUserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/security/OAuthClientRequestInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/security/SelmagUserDetailsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager-app/src/main/resources/application-standalone.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager-app/src/main/resources/db/changelog/V1/V1_1__Basic_schema_changelog.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager-app/src/main/resources/db/changelog/V1/accumulator-changelog.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager-app/src/main/resources/db/changelog/master-changelog.xml" afterDir="false" />
+    <list default="true" id="2bc9be35-dabd-44f5-9477-9248aeed388d" name="Changes" comment="add keycloak">
+      <change afterPath="$PROJECT_DIR$/customer-app/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/client/ProductsClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/client/WebClientProducts.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/config/ClientConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/controller/ProductsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/entity/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer-app/src/main/resources/application-standalone.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer-app/src/main/resources/static/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer-app/src/main/resources/templates/customer/products/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer-app/src/main/resources/templates/customer/products/product.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manager-app/src/test/java/sel/manager/controller/ProductsControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalogue-service/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/catalogue-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/catalogue-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalogue-service/src/main/java/sel/catalogue/controller/ProductRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/catalogue-service/src/main/java/sel/catalogue/controller/ProductRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalogue-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/catalogue-service/src/main/resources/application-standalone.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalogue-service/src/main/java/sel/catalogue/CatalogueServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/catalogue-service/src/main/java/sel/catalogue/CatalogueServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalogue-service/src/main/java/sel/catalogue/config/Security.java" beforeDir="false" afterPath="$PROJECT_DIR$/catalogue-service/src/main/java/sel/catalogue/config/Security.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/manager-app/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/manager-app/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/config/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/config/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager-app/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/ManagerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/ManagerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/controller/ProductsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/controller/ProductsController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +36,7 @@
         <option value="HTML File" />
         <option value="Record" />
         <option value="Interface" />
+        <option value="JUnit5 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -82,6 +83,8 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-23&quot;,
@@ -92,7 +95,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/win122333/IdeaProjects/mag/common/src/main/java/org/neoflex/Main.java&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/win122333/IdeaProjects/mag/customer-app/src/main/java/org/example/Main.java&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
@@ -113,6 +116,12 @@
       <recent name="E:\mag\manager-app\src\main\resources\templates\catalogue" />
       <recent name="E:\mag\manager-app\src\main\resources\templates\products" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="sel.manager.controller" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
@@ -122,13 +131,23 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Catalogue-app">
+  <component name="RunManager" selected="Application.CustomerApplication">
     <configuration name="Catalogue-app" type="Application" factoryName="Application">
       <envs>
         <env name="SPRING_PROFILES_ACTIVE" value="standalone" />
       </envs>
       <option name="MAIN_CLASS_NAME" value="sel.catalogue.CatalogueServiceApplication" />
       <module name="catalogue-service" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CustomerApplication" type="Application" factoryName="Application">
+      <envs>
+        <env name="SPRING_PROFILES_ACTIVE" value="standalone" />
+      </envs>
+      <option name="MAIN_CLASS_NAME" value="selm.customer.CustomerApplication" />
+      <module name="customer-app" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -145,6 +164,22 @@
     </configuration>
     <configuration name="All in generated-requests" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http">
       <method v="2" />
+    </configuration>
+    <configuration name="ProductsControllerTest.createProduct_requestIsValid_ReturnsRedirectionToProductPage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="manager-app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sel.manager.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="sel.manager.controller" />
+      <option name="MAIN_CLASS_NAME" value="sel.manager.controller.ProductsControllerTest" />
+      <option name="METHOD_NAME" value="createProduct_requestIsValid_ReturnsRedirectionToProductPage" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
@@ -173,8 +208,15 @@
     </configuration>
     <list>
       <item itemvalue="Application.Catalogue-app" />
+      <item itemvalue="Application.CustomerApplication" />
       <item itemvalue="Application.Manager-app" />
+      <item itemvalue="JUnit.ProductsControllerTest.createProduct_requestIsValid_ReturnsRedirectionToProductPage" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ProductsControllerTest.createProduct_requestIsValid_ReturnsRedirectionToProductPage" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -226,7 +268,15 @@
       <option name="project" value="LOCAL" />
       <updated>1772633436453</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add keycloak">
+      <option name="closed" value="true" />
+      <created>1772743908184</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1772743908184</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -252,7 +302,8 @@
     <MESSAGE value="db, entity, repo" />
     <MESSAGE value="add common module and refactor code" />
     <MESSAGE value="refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
+    <MESSAGE value="add keycloak" />
+    <option name="LAST_COMMIT_MESSAGE" value="add keycloak" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

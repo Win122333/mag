@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>[[${product.title}]] &ndash; Магазин</title>
+</head>
+<body>
+<a th:href="@{/customer/products/list}">Назад</a>
+<h1 th:text="${product.title}"></h1>
+<p th:text="${product.description}"></p>
+</body>
+</html>

@@ -29,7 +29,7 @@ public class ProductsController {
     }
 
     @GetMapping("/create")
-    public String createView() {
+    public String createProduct() {
         log.info("вызван get /create");
         return "create";
     }
