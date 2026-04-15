@@ -4,16 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2bc9be35-dabd-44f5-9477-9248aeed388d" name="Changes" comment="add getAll, getById endpoints">
-      <change afterPath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/entity/FavouriteProduct.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/entity/ProductReview.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/repository/FavouriteProductsRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/repository/InMemoryProductsRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/service/FavouriteProductsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/service/FavouriteProductsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="2bc9be35-dabd-44f5-9477-9248aeed388d" name="Changes" comment="add FavouriteProduct logic">
+      <change afterPath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/payload/NewProductReviewPayload.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/repository/InMemoryProductsReviewRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/repository/ProductsReviewRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/service/ProductReviewService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/service/ProductReviewServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/controller/ProductsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/controller/ProductsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/customer-app/src/main/resources/templates/customer/products/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/customer-app/src/main/resources/templates/customer/products/product.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,10 +22,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="Record" />
-        <option value="Interface" />
         <option value="JUnit5 Test Class" />
+        <option value="Interface" />
         <option value="Class" />
+        <option value="Record" />
       </list>
     </option>
   </component>
@@ -96,6 +93,10 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="selm.customer.repository" />
+      <recent name="selm.customer.service" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/common/src/main/java/org/api/http/dto" />
@@ -275,7 +276,15 @@
       <option name="project" value="LOCAL" />
       <updated>1776208325596</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add FavouriteProduct logic">
+      <option name="closed" value="true" />
+      <created>1776258106988</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1776258106988</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -303,7 +312,8 @@
     <MESSAGE value="refactor" />
     <MESSAGE value="add keycloak" />
     <MESSAGE value="add getAll, getById endpoints" />
-    <option name="LAST_COMMIT_MESSAGE" value="add getAll, getById endpoints" />
+    <MESSAGE value="add FavouriteProduct logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="add FavouriteProduct logic" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -312,6 +322,11 @@
           <url>file://$PROJECT_DIR$/common/src/main/java/org/api/Main.java</url>
           <line>15</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/customer-app/src/main/java/selm/customer/service/ProductReviewServiceImpl.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

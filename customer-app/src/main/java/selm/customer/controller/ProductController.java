@@ -7,7 +7,9 @@ import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Mono;
 import selm.customer.client.ProductsClient;
 import selm.customer.entity.Product;
+import selm.customer.payload.NewProductReviewPayload;
 import selm.customer.service.FavouriteProductsService;
+import selm.customer.service.ProductReviewService;
 
 @Controller
 @RequiredArgsConstructor
@@ -17,6 +19,7 @@ public class ProductController {
     private final ProductsClient productsClient;
 
     private final FavouriteProductsService favouriteProductsService;
+    private final ProductReviewService productReviewService;
 
     @ModelAttribute(name = "product", binding = false)
     public Mono<Product> getProduct(@PathVariable("productId") Integer id) {
@@ -28,9 +31,14 @@ public class ProductController {
             Model model
     ) {
         model.addAttribute("inFavourite", false);
-        return favouriteProductsService.findFavouriteProductByProduct(id)
-                .doOnNext(product -> model.addAttribute("inFavourite", true))
-                .thenReturn("customer/products/product");
+        return
+                productReviewService.findProductReviewsByProduct(id)
+                        .collectList()
+                        .doOnNext(reviews -> model.addAttribute("reviews", reviews))
+                        .then(
+                                favouriteProductsService.findFavouriteProductByProduct(id)
+                                        .doOnNext(product -> model.addAttribute("inFavourite", true))
+                                        .thenReturn("customer/products/product"));
     }
 
     @PostMapping("add-to-favourites")
@@ -50,5 +58,13 @@ public class ProductController {
                 .map(Product::id)
                 .flatMap(productId -> favouriteProductsService.removeProductFromFavourite(productId)
                         .thenReturn("redirect:/customer/products/%d".formatted(productId)));
+    }
+    @PostMapping("create-review")
+    public Mono<String> createReview (
+            @PathVariable("productId") Integer id,
+            NewProductReviewPayload payload
+    ) {
+        return productReviewService.createProductReview(id, payload.rating(), payload.review())
+                .thenReturn("redirect:/customer/products/%d".formatted(id));
     }
 }
