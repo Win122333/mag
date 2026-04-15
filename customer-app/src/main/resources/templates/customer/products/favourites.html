@@ -5,8 +5,8 @@
     <title>Наши товары &ndash; Магазин</title>
 </head>
 <body>
-<a th:href="@{/customer/products/favourites}">Избранные</a>
-<h1>Наши товары</h1>
+<a th:href="@{/customer/products/list}">Все</a>
+<h1>Избранные товары</h1>
 <ul>
     <li th:each="product: ${products}">
         <strong>

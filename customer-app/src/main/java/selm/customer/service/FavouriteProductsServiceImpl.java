@@ -25,6 +25,11 @@ public class FavouriteProductsServiceImpl implements FavouriteProductsService {
     }
 
     @Override
+    public Flux<FavouriteProduct> findFavouriteProductProducts() {
+        return favouriteProductsRepository.findAll();
+    }
+
+    @Override
     public Mono<FavouriteProduct> findFavouriteProductByProduct(Integer productId) {
         return favouriteProductsRepository.findFavouriteProductByProduct(productId);
     }

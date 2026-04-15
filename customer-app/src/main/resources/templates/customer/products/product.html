@@ -20,7 +20,12 @@
 </form>
 
 <h2>Отзывы</h2>
-
+<div th:if="${errors}">
+    <ul>
+        <li th:each="error: ${errors}" th:text="${error}">
+        </li>
+    </ul>
+</div>
 <form method="post" th:action="@{/customer/products/{productId}/create-review(productId=${product.id})}">
     <label><input type="radio" name="rating" value="1">1</label>
     <label><input type="radio" name="rating" value="2">2</label>

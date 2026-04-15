@@ -3,6 +3,8 @@ package selm.customer.client;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
+import org.springframework.web.reactive.function.client.WebClientRequestException;
+import org.springframework.web.reactive.function.client.WebClientResponseException;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import selm.customer.entity.Product;
@@ -25,6 +27,7 @@ public class WebClientProducts implements ProductsClient {
                 .get()
                 .uri("catalogue-api/products/{id}", id)
                 .retrieve()
-                .bodyToMono(Product.class);
+                .bodyToMono(Product.class)
+                .onErrorComplete(WebClientResponseException.NotFound.class);
     }
 }

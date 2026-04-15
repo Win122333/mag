@@ -7,12 +7,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import reactor.core.publisher.Mono;
 import selm.customer.client.ProductsClient;
+import selm.customer.entity.FavouriteProduct;
+import selm.customer.service.FavouriteProductsService;
 
 @Controller
 @RequiredArgsConstructor
 @RequestMapping("/customer/products")
 public class ProductsController {
     private final ProductsClient productsClient;
+    private final FavouriteProductsService favouriteProductsService;
     @GetMapping("/list")
     public Mono<String> getProductsListPage(
             Model model
@@ -21,5 +24,16 @@ public class ProductsController {
                 .collectList()
                 .doOnNext(products -> model.addAttribute("products", products))
                 .thenReturn("customer/products/list");
+    }
+    @GetMapping("favourites")
+    public Mono<String> getFavouriteProductsPage(Model model) {
+        return favouriteProductsService.findFavouriteProductProducts()
+                .map(FavouriteProduct::getProductId)
+                .collectList()
+                .flatMap(favouriteProducts -> productsClient.findAllProducts()
+                        .filter(product -> favouriteProducts.contains(product.id()))
+                        .collectList()
+                        .doOnNext(products -> model.addAttribute("products", products)))
+                .thenReturn("customer/products/favourites");
     }
 }

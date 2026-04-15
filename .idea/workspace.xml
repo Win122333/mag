@@ -4,13 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2bc9be35-dabd-44f5-9477-9248aeed388d" name="Changes" comment="add FavouriteProduct logic">
-      <change afterPath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/payload/NewProductReviewPayload.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/repository/InMemoryProductsReviewRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/repository/ProductsReviewRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/service/ProductReviewService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/service/ProductReviewServiceImpl.java" afterDir="false" />
+    <list default="true" id="2bc9be35-dabd-44f5-9477-9248aeed388d" name="Changes" comment="add ProductReview logic">
+      <change afterPath="$PROJECT_DIR$/customer-app/src/main/resources/messages.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer-app/src/main/resources/templates/customer/products/favourites.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer-app/src/main/resources/templates/errors/404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-app/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/customer-app/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/client/WebClientProducts.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/client/WebClientProducts.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/controller/ProductsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/controller/ProductsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/payload/NewProductReviewPayload.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/payload/NewProductReviewPayload.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/repository/FavouriteProductsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/repository/FavouriteProductsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/repository/InMemoryProductsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/repository/InMemoryProductsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/service/FavouriteProductsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/service/FavouriteProductsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/service/FavouriteProductsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/service/FavouriteProductsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-app/src/main/resources/templates/customer/products/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/customer-app/src/main/resources/templates/customer/products/list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/customer-app/src/main/resources/templates/customer/products/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/customer-app/src/main/resources/templates/customer/products/product.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -102,11 +110,11 @@
       <recent name="$PROJECT_DIR$/common/src/main/java/org/api/http/dto" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/customer-app/src/main/resources/templates/" />
+      <recent name="$PROJECT_DIR$/customer-app/src/main/resources" />
       <recent name="$PROJECT_DIR$/catalogue-service/src/main/resources/db/changelog" />
       <recent name="$PROJECT_DIR$/catalogue-service/src/main/resources" />
       <recent name="$PROJECT_DIR$/catalogue-service/src/main/resources/db/changelog/V1" />
-      <recent name="E:\mag\manager-app\src\main\resources\templates\catalogue" />
-      <recent name="E:\mag\manager-app\src\main\resources\templates\products" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -284,7 +292,15 @@
       <option name="project" value="LOCAL" />
       <updated>1776258106988</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="add ProductReview logic">
+      <option name="closed" value="true" />
+      <created>1776260034487</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1776260034487</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -313,7 +329,8 @@
     <MESSAGE value="add keycloak" />
     <MESSAGE value="add getAll, getById endpoints" />
     <MESSAGE value="add FavouriteProduct logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="add FavouriteProduct logic" />
+    <MESSAGE value="add ProductReview logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="add ProductReview logic" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
