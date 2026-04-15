@@ -4,8 +4,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-import selm.customer.entity.FavouriteProduct;
-import selm.customer.repository.FavouriteProductsRepository;
+import selm.feedback.entity.FavouriteProduct;
+import selm.feedback.repository.FavouriteProductsRepository;
 
 import java.util.UUID;
 

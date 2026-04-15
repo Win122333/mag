@@ -8,6 +8,5 @@ public interface FavouriteProductsService {
     Mono<FavouriteProduct> addProductToFavourite(Integer productId);
     Mono<Void> removeProductFromFavourite(Integer productId);
     Mono<FavouriteProduct> findFavouriteProductByProduct(Integer productId);
-
     Flux<FavouriteProduct> findFavouriteProductProducts();
 }
