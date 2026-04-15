@@ -4,26 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2bc9be35-dabd-44f5-9477-9248aeed388d" name="Changes" comment="add keycloak">
-      <change afterPath="$PROJECT_DIR$/customer-app/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/client/ProductsClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/client/WebClientProducts.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/config/ClientConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/controller/ProductController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/controller/ProductsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/entity/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customer-app/src/main/resources/application-standalone.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customer-app/src/main/resources/static/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customer-app/src/main/resources/templates/customer/products/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customer-app/src/main/resources/templates/customer/products/product.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manager-app/src/test/java/sel/manager/controller/ProductsControllerTest.java" afterDir="false" />
+    <list default="true" id="2bc9be35-dabd-44f5-9477-9248aeed388d" name="Changes" comment="add getAll, getById endpoints">
+      <change afterPath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/entity/FavouriteProduct.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/entity/ProductReview.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/repository/FavouriteProductsRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/repository/InMemoryProductsRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/service/FavouriteProductsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/service/FavouriteProductsServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalogue-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/catalogue-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalogue-service/src/main/java/sel/catalogue/CatalogueServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/catalogue-service/src/main/java/sel/catalogue/CatalogueServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalogue-service/src/main/java/sel/catalogue/config/Security.java" beforeDir="false" afterPath="$PROJECT_DIR$/catalogue-service/src/main/java/sel/catalogue/config/Security.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager-app/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/manager-app/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/ManagerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/ManagerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/controller/ProductsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/manager-app/src/main/java/sel/manager/controller/ProductsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/controller/ProductsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/controller/ProductsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-app/src/main/resources/templates/customer/products/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/customer-app/src/main/resources/templates/customer/products/product.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -276,7 +267,15 @@
       <option name="project" value="LOCAL" />
       <updated>1772743908184</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add getAll, getById endpoints">
+      <option name="closed" value="true" />
+      <created>1776208325596</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1776208325596</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -303,7 +302,8 @@
     <MESSAGE value="add common module and refactor code" />
     <MESSAGE value="refactor" />
     <MESSAGE value="add keycloak" />
-    <option name="LAST_COMMIT_MESSAGE" value="add keycloak" />
+    <MESSAGE value="add getAll, getById endpoints" />
+    <option name="LAST_COMMIT_MESSAGE" value="add getAll, getById endpoints" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

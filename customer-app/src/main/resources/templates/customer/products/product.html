@@ -8,5 +8,15 @@
 <a th:href="@{/customer/products/list}">Назад</a>
 <h1 th:text="${product.title}"></h1>
 <p th:text="${product.description}"></p>
+
+<form method="post" th:action="@{/customer/products/{productId}/add-to-favourites(productId=${product.id})}"
+    th:if="${!inFavourite}">
+
+    <button type="submit">Добавить в избранное</button>
+</form>
+<form method="post" th:action="@{/customer/products/{productId}/delete-from-favourites(productId=${product.id})}"
+    th:if="${inFavourite}">
+    <button type="submit">Удалить из избранного</button>
+</form>
 </body>
 </html>
