@@ -1,11 +1,11 @@
-package selm.customer.service;
+package selm.feedback.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-import selm.customer.entity.ProductReview;
-import selm.customer.repository.ProductsReviewRepository;
+import selm.feedback.entity.ProductReview;
+import selm.feedback.repository.ProductsReviewRepository;
 
 import java.util.UUID;
 
