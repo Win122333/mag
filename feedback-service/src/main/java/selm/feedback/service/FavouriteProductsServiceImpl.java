@@ -1,4 +1,4 @@
-package selm.customer.service;
+package selm.feedback.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

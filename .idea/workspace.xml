@@ -4,22 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2bc9be35-dabd-44f5-9477-9248aeed388d" name="Changes" comment="add ProductReview logic">
-      <change afterPath="$PROJECT_DIR$/customer-app/src/main/resources/messages.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customer-app/src/main/resources/templates/customer/products/favourites.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customer-app/src/main/resources/templates/errors/404.html" afterDir="false" />
+    <list default="true" id="2bc9be35-dabd-44f5-9477-9248aeed388d" name="Changes" comment="add exception handle and favourite page">
+      <change afterPath="$PROJECT_DIR$/feedback-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feedback-service/src/main/java/selm/feedback/controller/ProductReviewRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feedback-service/src/main/java/selm/feedback/entity/FavouriteProduct.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feedback-service/src/main/java/selm/feedback/entity/ProductReview.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feedback-service/src/main/java/selm/feedback/payload/NewProductReviewPayload.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-app/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/customer-app/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/client/WebClientProducts.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/client/WebClientProducts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/controller/ProductsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/controller/ProductsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/payload/NewProductReviewPayload.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/payload/NewProductReviewPayload.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/repository/FavouriteProductsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/repository/FavouriteProductsRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/repository/InMemoryProductsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/repository/InMemoryProductsRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/service/FavouriteProductsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/service/FavouriteProductsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/service/FavouriteProductsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/service/FavouriteProductsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-app/src/main/resources/templates/customer/products/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/customer-app/src/main/resources/templates/customer/products/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer-app/src/main/resources/templates/customer/products/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/customer-app/src/main/resources/templates/customer/products/product.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/entity/FavouriteProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/entity/FavouriteProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/entity/ProductReview.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/entity/ProductReview.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/repository/FavouriteProductsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/feedback-service/src/main/java/selm/feedback/repository/FavouriteProductsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/repository/InMemoryProductsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/feedback-service/src/main/java/selm/feedback/repository/InMemoryProductsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/repository/InMemoryProductsReviewRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/feedback-service/src/main/java/selm/feedback/repository/InMemoryProductsReviewRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/repository/ProductsReviewRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/feedback-service/src/main/java/selm/feedback/repository/ProductsReviewRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/service/FavouriteProductsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/feedback-service/src/main/java/selm/feedback/service/FavouriteProductsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/service/FavouriteProductsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/feedback-service/src/main/java/selm/feedback/service/FavouriteProductsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/service/ProductReviewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/feedback-service/src/main/java/selm/feedback/service/ProductReviewService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-app/src/main/java/selm/customer/service/ProductReviewServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/feedback-service/src/main/java/selm/feedback/service/ProductReviewServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,12 +34,17 @@
         <option value="HTML File" />
         <option value="JUnit5 Test Class" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="Record" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -66,46 +73,47 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Application.CatalogueApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ManagerApplication.executor&quot;: &quot;Run&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;HTTP Request.All in generated-requests.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.mag [org.apache.maven.plugins:maven-site-plugin:3.12.1:run].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-23&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/win122333/IdeaProjects/mag&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/win122333/IdeaProjects/mag/customer-app/src/main/java/org/example/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;,
-    &quot;settings.editor.splitter.proportion&quot;: &quot;0.26605505&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Application.CatalogueApplication.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.ManagerApplication.executor": "Run",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "HTTP Request.All in generated-requests.executor": "Run",
+    "Maven.mag [org.apache.maven.plugins:maven-site-plugin:3.12.1:run].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "jdk.selected.JAVA_MODULE": "openjdk-23",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/win122333/IdeaProjects/mag/feedback-service/src/main/java/selm/feedback",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "/Users/win122333/IdeaProjects/mag/feedback-service/src/main/java/neoflex/chulkov/Main.java",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors",
+    "settings.editor.splitter.proportion": "0.26605505",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="selm.customer.repository" />
       <recent name="selm.customer.service" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/feedback-service/src/main/java/selm/feedback" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/common/src/main/java/org/api/http/dto" />
     </key>
@@ -122,6 +130,9 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="sel.manager.controller" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="selm.feedback.entity" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
@@ -131,7 +142,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Application.CustomerApplication">
+  <component name="RunManager" selected="Application.FeedbackApplication">
     <configuration name="Catalogue-app" type="Application" factoryName="Application">
       <envs>
         <env name="SPRING_PROFILES_ACTIVE" value="standalone" />
@@ -148,6 +159,16 @@
       </envs>
       <option name="MAIN_CLASS_NAME" value="selm.customer.CustomerApplication" />
       <module name="customer-app" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FeedbackApplication" type="Application" factoryName="Application">
+      <envs>
+        <env name="SPRING_PROFILES_ACTIVE" value="standalone" />
+      </envs>
+      <option name="MAIN_CLASS_NAME" value="selm.feedback.FeedbackApplication" />
+      <module name="feedback-service" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -209,6 +230,7 @@
     <list>
       <item itemvalue="Application.Catalogue-app" />
       <item itemvalue="Application.CustomerApplication" />
+      <item itemvalue="Application.FeedbackApplication" />
       <item itemvalue="Application.Manager-app" />
       <item itemvalue="JUnit.ProductsControllerTest.createProduct_requestIsValid_ReturnsRedirectionToProductPage" />
     </list>
@@ -300,7 +322,15 @@
       <option name="project" value="LOCAL" />
       <updated>1776260034487</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="add exception handle and favourite page">
+      <option name="closed" value="true" />
+      <created>1776263773640</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1776263773640</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -314,7 +344,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="FEATURE/rest-service" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -330,7 +372,8 @@
     <MESSAGE value="add getAll, getById endpoints" />
     <MESSAGE value="add FavouriteProduct logic" />
     <MESSAGE value="add ProductReview logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="add ProductReview logic" />
+    <MESSAGE value="add exception handle and favourite page" />
+    <option name="LAST_COMMIT_MESSAGE" value="add exception handle and favourite page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

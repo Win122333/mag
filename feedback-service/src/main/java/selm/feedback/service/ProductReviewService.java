@@ -1,8 +1,8 @@
-package selm.customer.service;
+package selm.feedback.service;
 
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-import selm.customer.entity.ProductReview;
+import selm.feedback.entity.ProductReview;
 
 public interface ProductReviewService {
     Mono<ProductReview> createProductReview(Integer productId, Integer rating, String review);

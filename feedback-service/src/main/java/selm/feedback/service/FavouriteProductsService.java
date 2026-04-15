@@ -1,9 +1,8 @@
-package selm.customer.service;
+package selm.feedback.service;
 
-import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-import selm.customer.entity.FavouriteProduct;
+import selm.feedback.entity.FavouriteProduct;
 
 public interface FavouriteProductsService {
     Mono<FavouriteProduct> addProductToFavourite(Integer productId);
