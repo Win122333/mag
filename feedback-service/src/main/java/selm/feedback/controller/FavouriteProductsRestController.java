@@ -41,7 +41,7 @@ public class FavouriteProductsRestController {
                         .body(favouriteProduct));
     }
 
-    @DeleteMapping("/by-product-id/{productId:\\\\d+}")
+    @DeleteMapping("/by-product-id/{productId:\\d+}")
     public Mono<ResponseEntity<Void>> removeProductFromFavourite (
             @PathVariable("productId") Integer productId
     ) {

@@ -8,7 +8,7 @@ import org.springframework.web.reactive.function.client.WebClientResponseExcepti
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import selm.customer.entity.Product;
-@Service
+
 @RequiredArgsConstructor
 public class WebClientProducts implements ProductsClient {
     private final WebClient webClient;
